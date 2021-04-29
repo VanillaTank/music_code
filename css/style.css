@@ -1,0 +1,112 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, li {
+    list-style: none;
+}
+
+body {
+    background: #1976D2;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.task-box {
+    width: 100px;
+}
+.btnTask {
+    display: block;
+    background-color: rgb(252, 240, 200);
+    user-select: none;
+    text-align: center;
+    width: 100px;
+    height: 80px;
+    border: none;
+    box-shadow: none;
+    font-size: 40px;
+    cursor: pointer;    
+}
+.btnGetNewTask {
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    border: none;
+    box-shadow: none;
+    border-top: 1px solid #333;
+}
+.piano {
+    width: 700px;
+    height: 400px;
+    margin:50px auto;
+    display:flex;
+}
+.answerPoints {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+.answerPoints-item {
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+}
+.key {
+    width: 100px;
+    height: 100%;
+    border:2px solid #000;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    box-shadow: inset -2px -2px 5px #000;
+    text-align: center;
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    background: #fff;
+    user-select: none;
+    transition: .1s;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.key-b {
+    width: 70px;
+    background: #000;
+    font-size: 30px;
+    color:#fff;
+    height: 65%;
+    margin-left: -35px;
+    margin-right: -35px;
+    z-index: 2;
+}
+.key.active {
+    background: #ccc;
+}
+.key-b.active {
+    background: #333;
+}
