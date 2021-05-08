@@ -41,7 +41,7 @@ answerPointItem.forEach(item => {
             }, 500);
             setTimeout(() => {
                 refreshNote()
-            }, 950);
+            }, 1000);
         }
     })
 })
