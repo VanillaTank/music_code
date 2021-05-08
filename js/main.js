@@ -8,7 +8,7 @@ const answerPointItem = [...document.querySelectorAll('.answerPoints-item')];
 const timerAlert = $('.timerAlert')
 
 //работа с пианино
-keys.forEach(key => { key.addEventListener('click', playNote)});
+keys.forEach(key => { key.addEventListener('click', playNote) });
 
 //определение 1 загаданной ноты
 firstNote();
@@ -32,10 +32,16 @@ answerPointItem.forEach(item => {
         let currentChosenNote = evt.target.innerText;
         let currentAskNote = document.getElementById('currentAskNoteEl');
         if (currentChosenNote == currentAskNote.dataset.askedNote) {
+            document.body.style = 'background: #19d247;'
             currentAskNote.currentTime = 0.5;
             currentAskNote.play();
-            alert("Верно")
-            refreshNote()
+            setTimeout(() => {
+                document.body.style = 'background: #1976D2;'
+                console.log(1);
+            }, 500);
+            setTimeout(() => {
+                refreshNote()
+            }, 950);
         }
     })
 })
@@ -44,7 +50,6 @@ answerPointItem.forEach(item => {
 
 function $(el) { return document.querySelector(el) }
 
-//работа с загадыванием нового звука
 function refreshNote() {
     let currentAskNoteEl = document.createElement('audio')
     let randomNote = Math.floor(Math.random() * dataSound.length)
